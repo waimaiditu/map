@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/result/index"
+  ],
+  "plugins": {
+    "draw": {
+      "version": "1.0.0",
+      "provider": "wxcea6554dac7915f4"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

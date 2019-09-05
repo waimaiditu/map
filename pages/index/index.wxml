@@ -1,0 +1,3 @@
+<view id="nav" bindtap="goto">
+  Go to Plugin page
+</view>
