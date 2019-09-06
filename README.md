@@ -42,7 +42,7 @@
 Page({
   goto:function(){
     wx.navigateTo({  //wx.navigateTo进行跳转
-      url: 'plugin://draw/draw',  //注意此处路径修改
+      url: 'plugin://draw/draw',  //插件路径
       success: function (res) {   // 通过eventChannel向被打开页面传送数据
         res.eventChannel.emit('saveMapData', {  //注册saveMapData事件
           url:'/pages/result/index',  //数据保存后跳转至result页面
@@ -73,7 +73,7 @@ Page({
 Page({
   onLoad: function () {
     // 监听sendMapData事件，获取上一页面通过eventChannel传送到当前页面的数据
-  	const eventChannel = this.getOpenerEventChannel();
+    const eventChannel = this.getOpenerEventChannel();
     eventChannel.on('sendMapData', function (data) {
       console.log(data)
     })
