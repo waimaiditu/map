@@ -12,8 +12,10 @@
 ![Alt](https://github.com/waimaiditu/map/blob/master/static/wmdt.jpeg?raw=true)
 
 ## 申请权限
-- 请在小程序后台搜索本插件（AppID=wxcea6554dac7915f4）
+- 请在[小程序后台](https://mp.weixin.qq.com/wxamp/basicprofile/thirdauth)搜索本插件（AppID=wxcea6554dac7915f4）
   设置-第三方服务-添加插件
+![Alt](https://github.com/waimaiditu/map/blob/master/static/apply_1.jpg?raw=true)  
+![Alt](https://github.com/waimaiditu/map/blob/master/static/apply_2.jpg?raw=true)
 
 ## 调用方式
 - app.json中增加声明引入插件
@@ -21,7 +23,7 @@
 // app.json
 {
   "plugins": {
-    "routePlan": {
+    "mapEditPlugin": {
       "version": "1.0.0",
       "provider": "wxcea6554dac7915f4"
     }
@@ -42,7 +44,7 @@
 Page({
   goto:function(){
     wx.navigateTo({  //wx.navigateTo进行跳转
-      url: 'plugin://draw/draw',  //插件路径
+      url: 'plugin://mapEditPlugin/draw',  //插件路径
       success: function (res) {   // 通过eventChannel向被打开页面传送数据
         res.eventChannel.emit('saveMapData', {  //注册saveMapData事件
           url:'/pages/result/index',  //数据保存后跳转至result页面
