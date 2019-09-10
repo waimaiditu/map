@@ -4,7 +4,7 @@
     "pages/result/index"
   ],
   "plugins": {
-    "draw": {
+    "mapEditPlugin": {
       "version": "1.0.0",
       "provider": "wxcea6554dac7915f4"
     }

@@ -1,7 +1,7 @@
 Page({
   goto:function(){
     wx.navigateTo({
-      url: 'plugin://draw/draw',
+      url: 'plugin://mapEditPlugin/draw',
       success: function (res) {// 通过eventChannel向被打开页面传送数据
         res.eventChannel.emit('saveMapData', { 
           url:'/pages/result/index',
