@@ -1,5 +1,5 @@
 # 微信小程序地图编辑插件(mapEditPlugin)
-版本号：v1.0.0
+版本号：v1.1.0
 
 查看本文档前，建议先阅读[《小程序插件文档》](https://developers.weixin.qq.com/miniprogram/dev/framework/plugin/)
 ==注意微信开发工具调试基础库版本==
@@ -8,14 +8,17 @@
 - 本插件以小程序官方map地图组件为基础，接入腾讯地图sdk，实现地图标注(标注点地理信息自动获取，标注名修改，标注点移动)、线路描绘(多色彩多宽度，算法优化，数据加密)以及操作撤销清除保存等功能。目前仅支持插件页调用，后续将推出组件化插件。
 
 ## 插件应用
-- 官方实例
-![Alt](https://github.com/waimaiditu/map/blob/master/static/wmdt.jpeg?raw=true)
+- 官方示例
+
+![外卖地图小程序](https://images.gitee.com/uploads/images/2020/0913/220754_a8d583f5_5204229.jpeg "wmdt.jpeg")
 
 ## 申请权限
 - 请在[小程序后台](https://mp.weixin.qq.com/wxamp/basicprofile/thirdauth)搜索本插件（AppID=wxcea6554dac7915f4）
   设置-第三方服务-添加插件
-![Alt](https://github.com/waimaiditu/map/blob/master/static/apply_1.jpg?raw=true)  
-![Alt](https://github.com/waimaiditu/map/blob/master/static/apply_2.jpg?raw=true)
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/0913/220833_2392f359_5204229.jpeg "apply_1.jpg")
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/0913/220842_c18c9837_5204229.jpeg "apply_2.jpg")
 
 ## 调用方式
 - app.json中增加声明引入插件
@@ -24,7 +27,7 @@
 {
   "plugins": {
     "mapEditPlugin": {
-      "version": "1.0.0",
+      "version": "1.1.0",
       "provider": "wxcea6554dac7915f4"
     }
   }
@@ -66,7 +69,8 @@ Page({
 ```
 
 - 插件页
-![Alt](https://github.com/waimaiditu/map/blob/master/static/plugin.jpg?raw=true)
+
+![输入图片说明](https://images.gitee.com/uploads/images/2020/0913/220900_2901a2a5_5204229.jpeg "plugin.jpg")
 
 - 跳转页
  跳转页在onload阶段监听sendMapData事件，获取插件页面通过eventChannel传送的数据
